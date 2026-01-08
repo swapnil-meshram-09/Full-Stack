@@ -26,6 +26,13 @@ app.get('/api/data', (req, res) =>{
 
     // res.send(Data)
 
+    if(req.query.search){
+        const filterdData = Data.filter((data) =>{
+            data.title.includes(req.query.search)
+            res.send(filterdData)
+            return
+        })
+    }
 })
 
 
