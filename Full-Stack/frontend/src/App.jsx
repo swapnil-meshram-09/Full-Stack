@@ -32,13 +32,13 @@ function App() {
       <h3>Data Fetching . . . </h3>
     </div>
     <div>
-        {data.map((data) =>(
+        {/* {data.map((data) =>(
           <div key={data.id}>
              {data.title} 
              <br />
              {data.description}
           </div>
-        ))}
+        ))} */}
     </div>
     </>
   )
