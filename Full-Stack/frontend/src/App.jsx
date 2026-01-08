@@ -5,26 +5,26 @@ function App() {
 
   const [data, setData] = useState([])
 
-  // useEffect(() =>{
-  // (async function func(){
-  //     const response = await axios.get('/api/data')
-  //     console.log(response.data)
-  //     setData(response.data)
-  // })()
-  // },[])
-
-
   useEffect(() =>{
-    axios.get('/api/data')
-    .then((response) =>{    
-        console.log(response.data);
-
-        setData(response.data)   
-    })
-    .catch((error) =>{
-        console.log(error);   
-    })
+  (async () =>{
+      const response = await axios.get('/api/data')
+      console.log(response.data)
+      setData(response.data)
+  })()
   },[])
+
+
+  // useEffect(() =>{
+  //   axios.get('/api/data')
+  //   .then((response) =>{    
+  //       console.log(response.data);
+
+  //       setData(response.data)   
+  //   })
+  //   .catch((error) =>{
+  //       console.log(error);   
+  //   })
+  // },[])
 
   return (
     <>
