@@ -24,7 +24,15 @@ app.get('/api/data', (req, res) =>{
     //     res.send('server is starting.')
     // },3000)
 
-    res.send(Data)
+    // res.send(Data)
+
+    if(req.query.search){
+        const filterdData = Data.filter((data) =>{
+            data.title.includes(req.query.search)
+            req.send(filterdData)
+            return
+        })
+    }
 })
 
 
